@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/root_all"
+    >
+    <SurfaceView
+        android:id="@+id/pplay_video"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+    <!--  进度条控制  -->
+    <LinearLayout
+        android:id="@+id/controller"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <SeekBar
+                android:id="@+id/play_seek"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+
+        >
+        <ImageView
+            android:id="@+id/play_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/arrow_left"
+            />
+        <ImageView
+            android:id="@+id/play_or_pause"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/play_arrow"/>
+        <ImageView
+            android:id="@+id/play_foreword"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/arrow_right"
+            />
+        <!--   临时解决方法     -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <ImageView
+            android:id="@+id/oversee"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/settings_overscan" />
+    </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
